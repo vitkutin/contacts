@@ -1,0 +1,17 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "This is my first full-stack project, an app for finnish children to practice english words with!\r The app is implemented with React and Express/Node.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "mysql": "^2.18.1"
+  }
+}
