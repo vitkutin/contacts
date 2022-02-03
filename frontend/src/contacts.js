@@ -53,35 +53,43 @@ const Contacts = () => {
     let editedFirstName = window.prompt("First name:");
     let editedLastName = window.prompt("Last name:");
     let editedAge = window.prompt("Age:");
-    let editedItem = {
-      id: e.id,
-      first_name: editedFirstName,
-      last_name: editedLastName,
-      age: editedAge,
-    };
-    // Posts updated item to database
-    const options = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(editedItem),
-    };
-    // Delete outdated version of the item
-    fetch(`/contacts/` + e.id, {
-      method: "delete",
-    })
-      .then((res) => res.text())
-      .then((res) => console.log(res))
-      .then(() => {
-        // Update visible list
-        fetch("/contacts/", options)
-          .then((res) => console.log(res))
-          .then(() => {
-            if (index !== -1) {
-              contacts[index] = editedItem;
-              setContacts([...contacts]);
-            }
-          });
-      });
+    if (
+      editedFirstName !== null ||
+      editedLastName !== null ||
+      editedAge !== null
+    ) {
+      let editedItem = {
+        id: e.id,
+        first_name: editedFirstName,
+        last_name: editedLastName,
+        age: editedAge,
+      };
+      // Posts updated item to database
+      const options = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(editedItem),
+      };
+      // Delete outdated version of the item
+      fetch(`/contacts/` + e.id, {
+        method: "delete",
+      })
+        .then((res) => res.text())
+        .then((res) => console.log(res))
+        .then(() => {
+          // Update visible list
+          fetch("/contacts/", options)
+            .then((res) => console.log(res))
+            .then(() => {
+              if (index !== -1) {
+                contacts[index] = editedItem;
+                setContacts([...contacts]);
+              }
+            });
+        });
+    } else {
+      console.log("Canceled");
+    }
   }
 
   // Removes item from the database and visible list
