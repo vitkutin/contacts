@@ -1,0 +1,105 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Calibri Light", "Gill Sans", "Open Sans", Geneva, Helvetica,
+    Arial, sans-serif;
+  font-size: 20px;
+  margin: 200px;
+  display: flex;
+  justify-content: center;
+  background: rgb(85, 255, 222);
+  background: linear-gradient(
+    162deg,
+    rgba(85, 255, 222, 1) 0%,
+    rgb(86, 76, 168) 100%
+  );
+}
+h4 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 0px;
+  padding: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.486);
+}
+
+.column {
+  width: 150px;
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 10px;
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.24);
+}
+
+#bold {
+  font-weight: bold;
+}
+
+#edit {
+  color: rgba(12, 51, 160, 0.808);
+  margin-left: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+#trash {
+  color: rgba(153, 8, 80, 0.959);
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+#edit:hover {
+  color: rgba(50, 169, 248, 0.808);
+  cursor: pointer;
+}
+
+#trash:hover {
+  color: rgba(216, 10, 113, 0.959);
+  cursor: pointer;
+}
+
+#form,
+#search,
+#sort {
+  margin: 0px;
+  border: none;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.315);
+  border-radius: 2px;
+  padding: 10px;
+  width: 149px;
+  margin: 1px;
+  margin-bottom: 20px;
+}
+
+#submit {
+  position: relative;
+  top: 2px;
+  width: 150px;
+  height: 35px;
+  margin-inline: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(7, 118, 192, 0.938);
+  color: rgb(255, 255, 255);
+}
+
+#submit:hover {
+  background-color: rgba(50, 169, 248, 0.808);
+  cursor: pointer;
+}
+
+.filter {
+  display: inline-flex;
+}
+
+#search {
+  width: 150px;
+}
+#sort {
+  width: 170px;
+}
